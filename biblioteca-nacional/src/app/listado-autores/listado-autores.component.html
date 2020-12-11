@@ -1,0 +1,49 @@
+<table mat-table [dataSource]="listadoAutores" class="mat-elevation-z8">
+  
+    <!-- Nombre_De_Persona Column -->
+    <ng-container matColumnDef="nombre_de_persona">
+      <th mat-header-cell *matHeaderCellDef> NOMBRE </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre_de_persona}} </td>
+    </ng-container>
+    
+    <!-- Fecha_De_Nacimiento Column -->
+    <ng-container matColumnDef="fecha_de_nacimiento">
+        <th mat-header-cell *matHeaderCellDef> F.NACIMIENTO </th>
+        <td mat-cell *matCellDef="let element"> {{element.fecha_de_nacimiento}} </td>
+    </ng-container>
+
+    <!-- Fecha_De_Fallecimiento Column -->
+    <ng-container matColumnDef="fecha_de_fallecimiento">
+        <th mat-header-cell *matHeaderCellDef> F.FALLECIMIENTO </th>
+        <td mat-cell *matCellDef="let element"> {{element.fecha_de_fallecimiento}} </td>
+    </ng-container>
+
+    <!-- Lugar_De_Nacimiento Column -->
+    <ng-container matColumnDef="lugar_de_nacimiento">
+        <th mat-header-cell *matHeaderCellDef> LUGAR DE NACIMIENTO </th>
+        <td mat-cell *matCellDef="let element"> {{element.lugar_de_nacimiento}} </td>
+    </ng-container>
+
+    <!-- Lugar_De_Fallecimiento Column -->
+    <ng-container matColumnDef="lugar_de_fallecimiento">
+        <th mat-header-cell *matHeaderCellDef> LUGAR DE FALLECIMIENTO </th>
+        <td mat-cell *matCellDef="let element"> {{element.lugar_de_fallecimiento}} </td>
+    </ng-container>
+
+    <!-- Lugar_De_Fallecimiento Column -->
+    <ng-container matColumnDef="lugar_de_fallecimiento">
+        <th mat-header-cell *matHeaderCellDef> LUGAR DE FALLECIMIENTO </th>
+        <td mat-cell *matCellDef="let element"> {{element.lugar_de_fallecimiento}} </td>
+    </ng-container>
+
+    <!-- Obras_Relacionadas Column -->
+    <ng-container matColumnDef="obras_relacionadas">
+        <th mat-header-cell *matHeaderCellDef> OBRAS RELACIONADAS </th>
+        <td mat-cell *matCellDef="let element"> {{element.obras_relacionadas}} </td>
+    </ng-container>
+
+    
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
